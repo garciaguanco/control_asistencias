@@ -2,10 +2,18 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
     color: #333;
+}
+
+header, footer {
+    text-align: center;
+    padding: 10px;
 }
 
 button {
@@ -66,5 +74,49 @@ tr:nth-child(even) {
     font-weight: bold; /* Negrita para destacar */
 }
 
+/* Contenedor de botones adaptable */
+.button-container {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    /* En pantallas grandes, muestra tres columnas */
+    grid-template-columns: repeat(3, 1fr);
+}
 
+/* Adaptación a pantallas más pequeñas */
+@media (max-width: 768px) {
+    .button-container {
+        /* En pantallas medianas, muestra dos columnas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .button-container {
+        /* En pantallas pequeñas, muestra una columna */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para los botones */
+button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
 
