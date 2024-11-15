@@ -13,13 +13,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recoger los datos del formulario
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
+    $categoria = $_POST['categoria'];
     $estado = $_POST['estado'];
     $fecha = date("Y-m-d");
 
     // Verificar si ya existe un registro con los mismos datos
-    $check_sql = "SELECT * FROM asistencias WHERE nombre = ? AND apellido = ? AND fecha = ?";
+    $check_sql = "SELECT * FROM asistencias WHERE nombre = ? AND apellido = ? AND categoria = ? AND fecha = ?";
     if ($check_stmt = $conexion->prepare($check_sql)) {
-        $check_stmt->bind_param("sss", $nombre, $apellido, $fecha);
+        $check_stmt->bind_param("ssss", $nombre, $apellido, $categoria, $fecha);
         $check_stmt->execute();
         $result = $check_stmt->get_result();
 
@@ -28,12 +29,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "El registro ya existe.";
         } else {
             // Insertar solo si no existe un registro duplicado
-            $sql = "INSERT INTO asistencias (nombre, apellido, estado, fecha) VALUES (?, ?, ?, ?)";
+            $sql = "INSERT INTO asistencias (nombre, apellido, categoria, estado, fecha) VALUES (?, ?, ?, ?, ?)";
 
             // Preparar la consulta
             if ($stmt = $conexion->prepare($sql)) {
                 // Vincular los parámetros
-                $stmt->bind_param("ssss", $nombre, $apellido, $estado, $fecha);
+                $stmt->bind_param("ssss", $nombre, $apellido, $categoria, $estado, $fecha);
 
                 // Ejecutar la consulta
                 if ($stmt->execute()) {

@@ -16,12 +16,7 @@ header, footer {
     padding: 10px;
 }
 
-button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-}
+
 
 h1 {
     color: #333;
@@ -54,64 +49,22 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-
-/* Estilos para las celdas con diferentes estados */
-.presente {
-    background-color: #28a745; /* Verde */
-    color: white; /* Texto blanco */
-    font-weight: bold; /* Negrita para destacar */
-}
-
-.ausente {
-    background-color: #dc3545; /* Rojo */
-    color: white; /* Texto blanco */
-    font-weight: bold; /* Negrita para destacar */
-}
-
-.tardanza {
-    background-color: #ffc107; /* Amarillo */
-    color: black; /* Texto negro */
-    font-weight: bold; /* Negrita para destacar */
-}
-
-/* Contenedor de botones adaptable */
-.button-container {
-    display: grid;
-    gap: 10px;
-    padding: 20px;
-    /* En pantallas grandes, muestra tres columnas */
-    grid-template-columns: repeat(3, 1fr);
-}
-
-/* Adaptación a pantallas más pequeñas */
-@media (max-width: 768px) {
-    .button-container {
-        /* En pantallas medianas, muestra dos columnas */
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .button-container {
-        /* En pantallas pequeñas, muestra una columna */
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Estilos para los botones */
+/* Estilos para botones */
 button {
-    padding: 15px;
-    font-size: 18px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: green; /* Fondo verde */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambiar el cursor a puntero */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Suavizar la transición del color */
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: blue; /* Cambiar a azul al pasar el mouse */
 }
+
 
 /* Estilos para el pie de página */
 footer {

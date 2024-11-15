@@ -8,7 +8,7 @@ if ($conexion->connect_error) {
 }
 
 // Consulta para obtener los datos de asistencias
-$query = "SELECT nombre, apellido, estado, fecha FROM asistencias";
+$query = "SELECT nombre, apellido, categoria, estado, fecha FROM asistencias";
 $resultado = $conexion->query($query);
 
 // Verificar si la consulta obtuvo resultados
@@ -33,6 +33,7 @@ if ($resultado->num_rows > 0) {
         echo "<tr>
                 <td>" . htmlspecialchars($fila['nombre']) . "</td>
                 <td>" . htmlspecialchars($fila['apellido']) . "</td>
+                <td>" . htmlspecialchars($fila['categoria']) . "</td>
                 <td class='{$estadoClass}'>" . htmlspecialchars($fila['estado']) . "</td>
                 <td>" . htmlspecialchars($fila['fecha']) . "</td>
               </tr>";

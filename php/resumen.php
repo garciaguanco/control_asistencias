@@ -13,7 +13,7 @@ if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 }
 
-$sql = "SELECT estudiantes.nombre, estudiantes.apellido, asistencias.fecha, asistencias.estado 
+$sql = "SELECT estudiantes.nombre, estudiantes.apellido, estudiantes.categoria, asistencias.fecha, asistencias.estado 
         FROM asistencias
         JOIN estudiantes ON asistencias.estudiante_id = estudiantes.id
         WHERE MONTH(asistencias.fecha) = '$mes' AND YEAR(asistencias.fecha) = '$anio'

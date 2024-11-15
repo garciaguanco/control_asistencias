@@ -22,12 +22,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recoger los datos del formulario
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
+    $categoria = $_POST['categoria'];
     $estado = $_POST['estado'];
     $fecha = $_POST['fecha'];
 
 // Insertar los datos en la base de datos
-$sql = "INSERT INTO asistencias (nombre,apellido,estado,fecha)
-VALUES ('$nombre', '$apellido', '$estado', '$fecha')";
+$sql = "INSERT INTO asistencias (nombre,apellido,categoria,estado,fecha)
+VALUES ('$nombre', '$apellido', '$categoria', '$estado', '$fecha')";
 
 // Verificar si hay errores
 if ($conexion->query($sql) === TRUE) {
@@ -39,6 +40,4 @@ if ($conexion->query($sql) === TRUE) {
 // Cerrar la conexión
 }
 ?>
-
-
-
+                         

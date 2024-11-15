@@ -15,6 +15,7 @@
                 <tr>
                     <th>Nombre</th>
                     <th>Apellido</th>
+                    <th>Categoria</th>
                     <th>Estado</th>
                     <th>Fecha</th>
                 </tr>

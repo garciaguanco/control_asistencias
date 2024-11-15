@@ -23,11 +23,15 @@
 
         <!-- Formulario de registro -->
         <form action="php/registrar_asistencia.php" method="post">
+
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required />
 
             <label for="apellido">Apellido:</label>
             <input type="text" id="apellido" name="apellido" required />
+
+            <label for="categoria">Categoria:</label>
+            <input type="text" id="categoria" name="categoria" required />
 
             <label for="estado">Estado:</label>
             <select id="estado" name="estado" required>

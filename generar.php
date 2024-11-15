@@ -19,7 +19,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Mi Sitio Web</p>
+        <p>&copy; 2024 Club Atletico Universal - Generador de registro de Asistencias - Desarrollo Sebastian Garcia</p>
     </footer>
 </body>
 </html>
